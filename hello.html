@@ -1,0 +1,43 @@
+<!Doctype html>
+<html>
+    <head>
+
+<style>
+
+</style>
+</head>
+<body bgcolor='black'>
+
+<p id="disname" class="ip"></p>
+<p id="disname" class="ip" style="font-size: 60px; color: rgb(139, 84, 250); text-align:center;">Quiz starts in :</p>
+<p id="time" style="font-size: 100px; color: rgb(234, 8, 158); text-align:center;"></p>
+
+</body >
+<script type='text/javascript'>
+
+str=localStorage.getItem('var1');
+
+data=JSON.parse(str);
+
+var p=document.getElementById('disname');
+p.innerHTML='Hello'+' '+data.name.toUpperCase();
+p.style.fontSize="100px";
+p.style.textAlign='center';
+p.style.color='red';
+
+//storing data in web browser
+var i=5;
+function timer(){
+if(i!=-1){
+    document.getElementById('time').innerHTML=i;
+    i=i-1;
+} else{
+    window.location.href='start.html';
+}
+}
+
+setInterval(timer,1000);
+
+</script>
+
+</html>

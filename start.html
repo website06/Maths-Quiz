@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+font-family:Arial,sans-serif;
+background-color:seashell;
+margin:0;
+padding:0;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+}
+
+#main{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+background-color:#fff;
+border-radius:10px;
+box-shadow:0 4px 8px rgba(0,0,0,0.1);
+width:90%;
+max-width:800px;
+box-sizing:border-box;
+}
+
+#div{
+display:flex;
+justify-content:space-around;
+width:100%;
+flex-wrap:wrap;
+}
+
+.qus{
+width:100%;
+height:100px;
+font-size:80px;
+margin-bottom:20px;
+border:1px solid #ccc;
+border-radius:5px;
+text-align:center;
+color:red;
+padding:10px;
+box-sizing:border-box;
+}
+
+.b01{
+flex:1;
+height:80px;
+font-size:70px;
+margin:5px;
+border:1px solid #ccc;
+border-radius:5px;
+background-color:#007bff;
+color:#fff;
+cursor:pointer;
+text-align:center;
+}
+
+.b01:hover{
+background-color:#0056b3;
+}
+
+.next{
+height:80px;
+font-size:50px;
+margin:5px;
+border:1px solid #ccc;
+border-radius:5px;
+background-color:#28a745;
+color:#fff;
+cursor:pointer;
+text-align:center;
+}
+
+.next:hover{
+background-color:#218838;
+}
+
+#ans{
+font-size:100px;
+color:rgb(37,26,252);
+margin-top:20px;
+}
+
+#count{
+font-size:80px;
+margin-top:20px;
+color:#333;
+}
+
+@media (max-width:800px){
+.qus{
+font-size:40px;
+height:80px;
+}
+.b01,.next{
+font-size:35px;
+height:60px;
+}
+#ans{
+font-size:50px;
+}
+#count{
+font-size:30px;
+}
+}
+</style>
+</head>
+<body>
+<p id="count">Question No :1</p>
+<div id="main">
+<div id="div"></div>
+<p id="ans"></p>
+</div>
+</body>
+
+<script type="text/javascript" src="start.js">
+</script>
+</html>

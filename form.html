@@ -1,0 +1,50 @@
+<!Doctype html>
+<html>
+    <head>
+
+<style>
+
+.div{
+    align-items: auto;
+    justify-content: auto;
+    margin-left: 42%;
+}
+a:hover{
+    background-color: rgb(196, 232, 160);
+}
+</style>
+</head>
+
+<body>
+    <a href="index.html">
+        <input type="button" value="back" style="height:30px; width:70px;font-style: bold;background-color: aquamarine;">
+        </input>        </a>
+
+
+<div class="div">
+    <p class="ip">Enter Your Name:</p><br><input type="text" id="name" style="height:120px;font-size:60px;width:50%; background-color: rgb(245, 218, 222);"/><br><br>
+    <input type="submit" id="sub" style="height:70px;font-size:20px;width:30%;background-color:rgb(81, 135, 223);margin-left:10%;"/>
+    <p id="disname" class="ip"></p>
+</div>
+
+</body >
+<script type='text/javascript'>
+var ip=document.querySelector('.ip');
+ip.style.color='red';
+ip.style.fontSize='60px'
+
+var sub=document.getElementById('sub');
+sub.addEventListener('click',function(){
+
+var name=document.getElementById('name');
+data=name.value
+document.getElementById('disname').innerHTML=data;
+var obj={'name':data};
+str=JSON.stringify(obj);
+localStorage.setItem('var',str);
+window.location.href="class.html";
+});
+</script>
+
+
+</html>

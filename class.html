@@ -1,0 +1,99 @@
++<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+font-size: 16px;
+margin: 0;
+padding: 0;
+text-align: center;
+}
+
+#div {
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-left: 47%;
+}
+
+#div div {
+padding: auto;
+border: 1px solid rgb(235, 118, 235);
+}
+
+p.ip {
+font-size: 1rem;
+color: rgb(234, 8, 158);
+text-align: center;
+}
+
+p.ip.large {
+font-size: 2rem;
+color: rgb(139, 84, 250);
+}
+
+button {
+font-weight: bold;
+height: 50px;
+width: 80px;
+background-color: pink;
+margin: 5px;
+}
+
+@media (max-width: 768px) {
+#div {
+margin-left: 0;
+}
+
+p.ip.large {
+font-size: 1.5rem;
+}
+
+button {
+width: 60px;
+}
+}
+</style>
+</head>
+
+<body >
+
+<p id="disname" class="ip"></p>
+<p id="disname" class="ip" style="font-size: 60px; color: rgb(139, 84, 250); text-align:center;">Enter Your Class in :</p>
+<div id="div" style="font-size: 30px; color: rgb(234, 8, 158); text-align:center;"></div>
+
+</body >
+
+
+<script type='text/javascript'>
+str=localStorage.getItem('var');
+data=JSON.parse(str);
+div=document.getElementById('div');
+buttons=['LKG','UKG','1','2','3','4','5'];
+for(var i=0;i<7;i++){
+b=document.createElement('button');
+id='b'+i
+b.id=id;
+b.innerHTML=buttons[i];
+b.style.fontStyle="bold";
+b.style.height='50px';
+b.style.width='80px';
+b.style.backgroundColor='pink';
+div.appendChild(b);
+b.onclick=function(event) {
+ClickButoon(event.target.id);
+};
+};
+
+
+function ClickButoon(id){
+data.class=id;
+str=JSON.stringify(data);
+localStorage.setItem('var1',str)
+window.location.href='hello.html'
+}
+</script>
+
+</html>
